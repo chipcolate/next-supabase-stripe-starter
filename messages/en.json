@@ -1,8 +1,8 @@
 {
 	"Global": {
 		"metadata": {
-			"title": "Your Next Store - Demo",
-			"description": "A Next.js boilerplate for building your online store instantly: simple, quick, powerful."
+			"title": "eCommerce Chipcolate Template",
+			"description": "A modern Next.js boilerplate for quickly building an eCommerce."
 		},
 		"notFound": {
 			"title": "Not found",

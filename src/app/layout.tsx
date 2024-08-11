@@ -41,6 +41,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
   const messages = await getMessages();
 
   return (
+    // to toggle dark mode add className="dark"
     <html lang={locale}>
       <body className={cn('font-sans antialiased', montserrat.variable, montserratAlternates.variable)}>
         <NextIntlClientProvider messages={messages}>

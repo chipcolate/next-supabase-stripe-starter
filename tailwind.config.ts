@@ -3,7 +3,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
 const config: Config = {
-  darkMode: ['class'],
+  darkMode: 'selector',
   content: ['./src/**/*.{ts,tsx}'],
   theme: {
     container: {
@@ -14,6 +14,9 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        xs: "400px",
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
