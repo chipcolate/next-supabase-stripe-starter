@@ -8,8 +8,8 @@ import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter } from 'react-icons/io5'
 
 import { Logo } from '@/components/logo';
 import { Toaster } from '@/components/ui/toaster';
+import { publicUrl } from '@/env.mjs';
 import { cn } from '@/utils/cn';
-import { getEnvVar } from '@/utils/get-env-var';
 import { Analytics } from '@vercel/analytics/react';
 
 import { Navigation } from './navigation';
@@ -34,7 +34,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
   return {
     title: t('title'),
     description: t('description'),
-    metadataBase: new URL(getEnvVar(process.env.NEXT_PUBLIC_LOCAL_URL, 'NEXT_PUBLIC_LOCAL_URL')),
+    metadataBase: new URL(publicUrl),
   };
 };
 

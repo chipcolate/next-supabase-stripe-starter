@@ -2,16 +2,16 @@
 
 import { cookies } from 'next/headers';
 
+import { env } from '@/env.mjs';
 import { Database } from '@/libs/supabase/types';
-import { getEnvVar } from '@/utils/get-env-var';
 import { type CookieOptions, createServerClient } from '@supabase/ssr';
 
 export function createSupabaseServerClient() {
   const cookieStore = cookies();
 
   return createServerClient<Database>(
-    getEnvVar(process.env.NEXT_PUBLIC_SUPABASE_URL, 'NEXT_PUBLIC_SUPABASE_URL'),
-    getEnvVar(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY, 'NEXT_PUBLIC_SUPABASE_ANON_KEY'),
+    env.NEXT_PUBLIC_SUPABASE_URL,
+    env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     {
       cookies: {
         get(name: string) {

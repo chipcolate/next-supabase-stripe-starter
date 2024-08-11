@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 
-import { getEnvVar } from '@/utils/get-env-var';
+import { env } from '@/env.mjs';
 
-export const resendClient = new Resend(getEnvVar(process.env.RESEND_API_KEY, 'RESEND_API_KEY'));
+
+export const resendClient = new Resend(env.RESEND_API_KEY);

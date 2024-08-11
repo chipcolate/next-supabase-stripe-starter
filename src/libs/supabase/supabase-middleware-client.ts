@@ -2,7 +2,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 
-import { getEnvVar } from '@/utils/get-env-var';
+import { env } from '@/env.mjs';
 import { type CookieOptions, createServerClient } from '@supabase/ssr';
 
 export async function supabaseMiddlewareClient(req: NextRequest) {
@@ -14,8 +14,8 @@ export async function supabaseMiddlewareClient(req: NextRequest) {
   });
 
   const supabase = createServerClient(
-    getEnvVar(process.env.NEXT_PUBLIC_SUPABASE_URL, 'NEXT_PUBLIC_SUPABASE_URL'),
-    getEnvVar(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY, 'NEXT_PUBLIC_SUPABASE_URL'),
+    env.NEXT_PUBLIC_SUPABASE_URL,
+    env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     {
       cookies: {
         get(name: string) {
