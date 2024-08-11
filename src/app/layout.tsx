@@ -11,6 +11,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { publicUrl } from '@/env.mjs';
 import { cn } from '@/utils/cn';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { Navigation } from './navigation';
 
@@ -55,6 +56,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
           </div>
           <Toaster />
         </NextIntlClientProvider>
+        <SpeedInsights />
         <Analytics />
       </body>
     </html>

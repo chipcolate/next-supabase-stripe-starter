@@ -1,10 +1,10 @@
 'use client';
 
 import { type ComponentPropsWithRef } from 'react';
-import Link from 'next/link';
+import NextLink from 'next/link';
 import { useRouter } from 'next/navigation';
 
-export const YnsLink = (props: ComponentPropsWithRef<typeof Link>) => {
+export const Link = (props: ComponentPropsWithRef<typeof NextLink>) => {
   const router = useRouter();
   const strHref = typeof props.href === 'string' ? props.href : props.href.href;
 
@@ -15,7 +15,7 @@ export const YnsLink = (props: ComponentPropsWithRef<typeof Link>) => {
   };
 
   return (
-    <Link
+    <NextLink
       {...props}
       prefetch={false}
       onMouseEnter={(e) => {
