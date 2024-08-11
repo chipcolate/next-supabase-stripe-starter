@@ -1,5 +1,5 @@
 {
-  "name": "UPDATE_THIS_WITH_YOUR_APP_NAME",
+  "name": "next-supabase-stripe-starter",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -35,6 +35,7 @@
     "clsx": "2.1.0",
     "lucide-react": "0.309.0",
     "next": "14.0.4",
+    "next-intl": "^3.17.2",
     "next-route-handler-pipe": "1.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
